@@ -88,11 +88,11 @@ private[spark] trait BasicTestsSuite { k8sSuite: KubernetesSuite =>
       expectedJVMValue = Seq("(spark.test.foo,spark.test.bar)"))
   }
 
-  test("Run SparkRemoteFileTest using a remote data file", k8sTestTag) {
-    sparkAppConf
-      .set("spark.files", REMOTE_PAGE_RANK_DATA_FILE)
-    runSparkRemoteCheckAndVerifyCompletion(appArgs = Array(REMOTE_PAGE_RANK_FILE_NAME))
-  }
+//  test("Run SparkRemoteFileTest using a remote data file", k8sTestTag) {
+//    sparkAppConf
+//      .set("spark.files", REMOTE_PAGE_RANK_DATA_FILE)
+//    runSparkRemoteCheckAndVerifyCompletion(appArgs = Array(REMOTE_PAGE_RANK_FILE_NAME))
+//  }
 }
 
 private[spark] object BasicTestsSuite {
